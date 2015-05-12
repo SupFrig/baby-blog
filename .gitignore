@@ -1,13 +1,37 @@
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
+!wp-config.php
+!wp-content/
+!_html/
+
+# Ignore everything in the "wp-content" directory, except the "themes" directories.
+wp-content/*
+!wp-content/themes/
+
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+wp-content/plugins/*
+
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+wp-content/themes/*
+!wp-content/themes/babyblog/
+
+# Exclude generated files
+.DS_Store
+.DS_Store?
+.svn 
+.cvs 
+*.bak 
+*.swp 
+[Tt]humbs.db
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+.psd
+.sass-cache
 *.log
-.htaccess
-sitemap.xml
-sitemap.xml.gz
-wp-config.php
-wp-content/advanced-cache.php
-wp-content/backup-db/
-wp-content/backups/
-wp-content/blogs.dir/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/uploads/
-wp-content/wp-cache-config.php
