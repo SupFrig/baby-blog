@@ -1,0 +1,35 @@
+<html>
+<head>
+<script src="angular.js"></script>
+<script src="angular-route.js"></script>
+</head>
+<body>
+<div ng-app="myApp">
+<label>Name:</label>
+<input type="text" ng-model="yourName" placeholder="Enter a name here">
+<hr>
+<h1>Hello {{yourName}}!</h1>
+<div ng-view=""></div>
+
+<script type="text/ng-template" id="random.html">
+{{random}}
+</script>
+</div>
+</body>
+</html>
+<script>
+var app = angular.module('myApp',['ngRoute']);
+	
+app.controller('RandomController', function($scope){
+	$scope.random = "lol";
+});
+
+app.config(function($routeProvider){
+		$routeProvider
+			.when('/', {
+				templateUrl:'random.html',
+				controller:'RandomController'
+			})
+			.otherwise({redirectTo: '/'});
+	});
+</script>
