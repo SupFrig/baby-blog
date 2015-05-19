@@ -6,26 +6,16 @@
 				<li><a href="/" title="Homepage"><img src="img/skin/btn-home.png"/></a></li>
 				<li><a href="/comic/{{comics.first.number}}" title="First comic"><img src="img/skin/btn-first.png"/></a></li>
 				<?php if($prev): ?>
-				<li ng-switch on="comics.previous">
-					<div ng-switch-when="comics.previous.number">
-						<a href="/comic/{{comics.previous.number}}" title="Previous">
-							<img src="img/skin/btn-prev.png"/>
-						</a>
-					</div>
-					<div ng-switch-default>
+				<li>
+					<a href="/comic/{{comics.previous.number}}" title="Previous">
 						<img src="img/skin/btn-prev.png"/>
-					</div>
+					</a>
 				</li>
 				<li><a href="#" title="Random"><img src="img/skin/btn-random.png"/></a></li>
-				<li ng-switch on="comics.next">
-					<div ng-switch-when="comics.next.number">
-						<a href="/comic/{{comics.next.number}}" title="Next">
-							<img src="img/skin/btn-next.png"/>
-						</a>
-					</div>
-					<div ng-switch-default>
+				<li>
+					<a href="/comic/{{comics.next.number}}" title="Next">
 						<img src="img/skin/btn-next.png"/>
-					</div>
+					</a>
 				</li>
 				<li><a href="/comic/{{comics.last.number}}" title="Last"><img src="img/skin/btn-last.png"/></a></li>
 			</ul>

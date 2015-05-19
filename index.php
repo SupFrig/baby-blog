@@ -21,7 +21,7 @@
 	</head>
 	<body>
 		<div id="viewport" ng-app="babyblog">
-			<h1 class="title">{{blogTitle}}</h1>
+			<h1 class="title">{{blogTitle.base}} <span>{{blogTitle.suffix}}</span></h1>
 			<div ng-view=""></div>
 			<ul id="footer">
 				<li><a href="#">about</a></li>

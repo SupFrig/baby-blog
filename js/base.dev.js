@@ -21,7 +21,10 @@ app.config(function($routeProvider,$locationProvider){
 });
 
 app.run(function($rootScope) {
-	$rootScope.blogTitle = 'BbVomi';
+	$rootScope.blogTitle = {
+		base: 'In the mouth',
+		suffix: 'of Madness'
+	};
 });
 
 //comic retrieving factory

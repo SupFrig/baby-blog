@@ -1,7 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Reenie+Beanie);
-
+@import url(http://fonts.googleapis.com/css?family=Unkempt);
 body {
-	background: #C6F1C6;
+	background: #DBEEF0;
 	overflow-x: hidden;
 	font-family: arial,sans-serif;
 	color: #3a3a3a;
@@ -25,10 +24,11 @@ body {
 }
 
 #viewport .title{
-	font-size: 90px;
+	font-size: 55px;
+	height: 78px;
 	line-height: 50px;
 	color: #76c276;
-	font-family: 'Reenie Beanie';
+	font-family: Unkempt;
 	float: right;
 }
 
@@ -89,6 +89,8 @@ body {
 #viewport #content{
 	clear: both;
 	padding-top: 26px;
+	background: #fff;
+	min-height: 700px;
 }
 
 #viewport #content .comic{
