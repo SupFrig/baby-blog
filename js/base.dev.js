@@ -22,8 +22,8 @@ app.config(function($routeProvider,$locationProvider){
 
 app.run(function($rootScope) {
 	$rootScope.blogTitle = {
-		base: 'In the mouth',
-		suffix: 'of Madness'
+		base: 'Funky',
+		suffix: 'Baby'
 	};
 });
 
