@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Unkempt);
+@import url(http://fonts.googleapis.com/css?family=Chewy|Gloria+Hallelujah);
 body {
 	background: #DBEEF0;
 	overflow-x: hidden;
@@ -25,11 +26,19 @@ body {
 
 #viewport .title{
 	font-size: 55px;
-	height: 78px;
+	width: 0px;
+	padding-left: 177px;
+	overflow: hidden;
+	height: 151px;
 	line-height: 50px;
-	color: #76c276;
-	font-family: Unkempt;
+	color: #76C276;
 	float: right;
+	background: transparent url("../img/skin/title-v2.png") no-repeat scroll left top;
+	opacity: 1;
+	position: absolute;
+	z-index: 34;
+	right: -40px;
+	top: -30px;
 }
 
 #viewport .title span{
@@ -62,7 +71,7 @@ body {
 #viewport .big-baby{
 	position: absolute;
 	z-index: 1;
-	top: -75px;
+	top: -68px;
 	left: -231px;
 	width: 185px;
 	height: 206px;
@@ -88,8 +97,7 @@ body {
 
 #viewport #content{
 	clear: both;
-	padding-top: 26px;
-	background: #fff;
+	padding-top: 35px;
 	min-height: 700px;
 }
 

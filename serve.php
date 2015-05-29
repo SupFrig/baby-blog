@@ -5,12 +5,7 @@
 */
 
 //config
-$db_config = array(
-	'host' => 'localhost',
-	'dbname' => 'babyblog',
-	'username' => 'root',
-	'password' => 'root'
-);
+require_once('config/config.php');
 
 $return = array(
 	'first' => '',
