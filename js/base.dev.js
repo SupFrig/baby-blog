@@ -2,7 +2,7 @@ var app = angular.module('babyblog',['ngRoute']);
 
 
 //config
-app.config(function($routeProvider,$locationProvider){
+app.config(function($routeProvider,$locationProvider,$sceDelegateProvider){
 	$routeProvider
 	.when('/', {
 		templateUrl:'views/comic.html',
@@ -18,10 +18,14 @@ app.config(function($routeProvider,$locationProvider){
 	})
 	.otherwise({redirectTo: '/'});
 	$locationProvider.html5Mode(true);
+	$sceDelegateProvider.resourceUrlWhitelist(['**']);
 });
 
 app.run(function($rootScope) {
-	$rootScope.blogTitle = 'BbVomi';
+	$rootScope.blogTitle = {
+		base: 'Baby',
+		suffix: 'Oredom'
+	};
 });
 
 //comic retrieving factory
@@ -37,11 +41,11 @@ app.factory("getComics", ['$http',function($http) {
 			.success(callback);
 			
 		},
-		getSingleComic: function(comic_id){
+
+		getSingleComic: function(callback){
 			var comicId = this.comicId;
-			$http.get('serve.php?comic='+comic_id)
+			$http.get('serve.php',{params:{comic: comicId}})
 			.success(callback);
-			
 		}
 	}
 }]);
@@ -49,15 +53,13 @@ app.factory("getComics", ['$http',function($http) {
 //controllers
 app.controller('HomeController',['$scope','getComics',function($scope,getComics){
 	getComics.getData(function(data){
-		console.log(data);
 		$scope.comics = data;
 	});
 }]);
 
-app.controller('SingleComicController',['$scope','getComics',function($scope,getComics){
-	getComics.setComicId(3);
+app.controller('SingleComicController',['$scope','getComics','$routeParams',function($scope,getComics,$routeParams){
+	getComics.setComicId($routeParams.id);
 	getComics.getSingleComic(function(data){
-		console.log(data);
 		$scope.comics = data;
 	});
 }]);
