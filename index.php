@@ -24,11 +24,11 @@
 			<h1 class="title">Baby Oredom</h1>
 			<div ng-view=""></div>
 			<ul id="footer">
-				<li><a href="#">about</a></li>
+				<!--<li><a href="#">about</a></li>
 				<li> - </li>
 				<li><a href="#">archives</a></li>
 				<li> - </li>
-				<li><a href="#">contact</a></li>
+				<li><a href="#">contact</a></li>-->
 			</ul>
 		</div>
 		<div id="viewport-bottom"></div>
