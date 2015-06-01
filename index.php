@@ -20,6 +20,9 @@
 		<base href="<?php echo $base_url; ?>">
 	</head>
 	<body>
+		<div style="display:none">
+			<?php var_dump($_SERVER); ?>
+		</div>
 		<div id="viewport" ng-app="babyblog">
 			<h1 class="title">Baby Oredom</h1>
 			<div ng-view=""></div>
