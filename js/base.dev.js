@@ -5,15 +5,15 @@ var app = angular.module('babyblog',['ngRoute']);
 app.config(function($routeProvider,$locationProvider,$sceDelegateProvider){
 	$routeProvider
 	.when('/', {
-		templateUrl:'views/comic.html',
+		templateUrl:'/views/comic.html',
 		controller:'HomeController'
 	})
 	.when('/comic/:id', {
-		templateUrl:'views/comic.html',
+		templateUrl:'/views/comic.html',
 		controller:'SingleComicController'
 	})
 	.when('/random', {
-		templateUrl:'views/comic.html',
+		templateUrl:'/views/comic.html',
 		controller:'RandomController'
 	})
 	.otherwise({redirectTo: '/'});
