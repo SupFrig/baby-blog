@@ -1,4 +1,4 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} !^(.*)\.baby-oredom\.com$ [NC]
+RewriteCond %{HTTP_HOST} ^baby-oredom.com [NC]
 RewriteRule ^(.*)$ http://www.baby-oredom.com/$1
 
