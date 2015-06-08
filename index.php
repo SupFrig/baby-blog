@@ -1,9 +1,5 @@
 <?php
 	/* 
-	REMINDER
-		Uploader les BD dans comics/ au format .jpg en les nommant selon la numérotation
-		la nav sera pétée si la numérotation des jpg ne suit pas
-		
 	TODO
 		bouton random
 	*/
@@ -27,8 +23,8 @@
 				<!--<li><a href="#">about</a></li>
 				<li> - </li>
 				<li><a href="#">archives</a></li>
-				<li> - </li>
-				<li><a href="#">contact</a></li>-->
+				<li> - </li>-->
+				<li><a href="mailto:baby.boredom@gmail.com">contact</a></li>
 			</ul>
 		</div>
 		<div id="viewport-bottom"></div>
