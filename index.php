@@ -5,7 +5,7 @@
 	*/
 	
 	//global configs
-	$is_dev = false;
+	$is_dev = true;
 	$base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/';
 	
 ?>
