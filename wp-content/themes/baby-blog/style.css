@@ -1,0 +1,185 @@
+/*
+Theme Name: Baby Boredom
+Author: SupFrig
+Description: Wordpress theme for Baby Boredom webcomic
+Version: 0.1
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Unkempt);
+@import url(http://fonts.googleapis.com/css?family=Chewy|Gloria+Hallelujah);
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	background: #DBEEF0;
+	overflow-x: hidden;
+	font-family: arial,sans-serif;
+	color: #3a3a3a;
+}
+
+#viewport {
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 80px;
+}
+#viewport-bottom {
+	position: fixed;
+	z-index: -1;
+	bottom: 0px;
+	right: 0px;
+	display: block;
+	width: 500px;
+	height: 318px;
+	background: url(img/skin/bg-viewport.jpg) no-repeat top left;
+}
+
+#viewport .title{
+	font-size: 55px;
+	width: 0px;
+	padding-left: 350px;
+	overflow: hidden;
+	height: 177px;
+	line-height: 50px;
+	color: #76C276;
+	float: right;
+	background: transparent url("img/skin/title.png") no-repeat scroll left top;
+	opacity: 1;
+	position: absolute;
+	z-index: 34;
+	right: -40px;
+	top: -30px;
+}
+
+#viewport .title span{
+	color: #BB825F;
+}
+
+#viewport #menu {
+	position: relative;
+	z-index: 2;
+	margin: 23px 0px 23px 40px;
+	width: 350px;
+}
+
+#viewport #menu li{
+	float: left;
+	width: 58px;
+	height: 50px;
+	opacity:0.5;
+}
+
+#viewport #menu li:hover{
+	opacity:1;
+}
+
+#viewport #menu li.disabled:hover{
+	opacity:0.8;
+	background: url(img/skin/cross.png) no-repeat top center;
+}
+
+#viewport .big-baby{
+	position: absolute;
+	z-index: 1;
+	top: -68px;
+	left: -231px;
+	width: 185px;
+	height: 206px;
+	background: url(img/skin/big-baby.png) no-repeat top left;
+	padding-top: 191px;
+	padding-left: 165px;
+	font-size: 20px;
+}
+
+#viewport .big-baby .number{
+	font-family: impact;
+	display: block;
+	width: 55px;
+	text-align: center;
+}
+
+#viewport .big-baby .date {
+	display: block;
+	font-size: 11px;
+	width: 55px;
+	text-align: center;
+}
+
+#viewport #content{
+	clear: both;
+	padding-top: 35px;
+	min-height: 700px;
+}
+
+#viewport #content .comic{
+	width: 100%;
+	display: block;
+	position: relative;
+	z-index: 0;
+}
+
+#viewport #footer {
+	text-align: right;
+	margin-bottom: 100px;
+	line-height: 30px;
+}
+
+#viewport #footer li{
+	display: inline;
+	padding: 0px 2px;
+}
+#viewport #footer li a{
+	color: #3a3a3a;
+	text-decoration: none;
+}
+
+#viewport #footer li a:hover{
+	text-decoration: underline;
+}
