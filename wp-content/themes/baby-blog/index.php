@@ -1,5 +1,6 @@
 <?php
 	get_header();
+	query_posts('showposts=1');
 	if ( have_posts() ) :
 		while ( have_posts() ) : the_post(); ?>
 		<div id="viewport">
@@ -10,7 +11,7 @@
 			</div>
 			<?php get_template_part('menu'); ?> 
 			<div id="content">
-				<img class="comic" src="<?php bloginfo('template_url'); ?>/comics/1.jpg" alt="{{comics.current.title}}"/>
+				<?php the_post_thumbnail('comic'); ?>
 			</div>
 			<?php get_template_part('menu-footer'); ?>
 		</div>

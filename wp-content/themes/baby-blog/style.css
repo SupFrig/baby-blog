@@ -154,8 +154,27 @@ body {
 
 #viewport #content{
 	clear: both;
-	padding-top: 35px;
+	position: relative;
+	top: 35px;
 	min-height: 700px;
+	background: #fff;
+}
+
+#viewport #content .shares{
+	padding-left: 20px;
+	display: table;
+	height: 30px;
+	vertical-align: middle;
+}
+
+.fb_iframe_widget span {
+	vertical-align: baseline !important;
+}
+
+#viewport #content .shares > *{
+	display: table-cell;
+	vertical-align: middle;
+	padding-right: 10px;
 }
 
 #viewport #content .comic{
@@ -167,7 +186,7 @@ body {
 
 #viewport #footer {
 	text-align: right;
-	margin-bottom: 100px;
+	margin-bottom: 15px;
 	line-height: 30px;
 }
 
