@@ -46,7 +46,7 @@ function mytheme_comment($comment, $args, $depth) {
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
      <div id="comment-<?php comment_ID(); ?>">
       <div class="comment-author vcard">
-         <?php echo get_avatar($comment,$size='48',$default='<path_to_url>' ); ?>
+         <?php echo get_avatar($comment,$size='100',$default='<path_to_url>' ); ?>
 
          <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
       </div>
@@ -64,4 +64,16 @@ function mytheme_comment($comment, $args, $depth) {
       </div>
      </div>
 <?php
-        }
+}
+
+// Add a default avatar to Settings > Discussion
+if ( !function_exists('fb_addgravatar') ) {
+	function fb_addgravatar( $avatar_defaults ) {
+		$myavatar = get_bloginfo('template_directory') . '/img/data/default_avatar.jpg';
+		$avatar_defaults[$myavatar] = 'Baby';
+
+		return $avatar_defaults;
+	}
+
+	add_filter( 'avatar_defaults', 'fb_addgravatar' );
+}

@@ -202,3 +202,9 @@ body {
 #viewport #footer li a:hover{
 	text-decoration: underline;
 }
+
+/* comments */
+#comments {
+	margin: 3px;
+	background: #DBEEF0;
+}
