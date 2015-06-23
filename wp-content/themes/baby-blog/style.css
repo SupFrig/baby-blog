@@ -5,8 +5,7 @@ Description: Wordpress theme for Baby Boredom webcomic
 Version: 0.1
 */
 
-@import url(http://fonts.googleapis.com/css?family=Unkempt);
-@import url(http://fonts.googleapis.com/css?family=Chewy|Gloria+Hallelujah);
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker|Coming+Soon);
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -62,6 +61,11 @@ body {
 	overflow-x: hidden;
 	font-family: arial,sans-serif;
 	color: #3a3a3a;
+}
+
+.valign {
+	display: table-cell;
+	vertical-align: middle;
 }
 
 #viewport {
@@ -188,6 +192,7 @@ body {
 	text-align: right;
 	margin-bottom: 15px;
 	line-height: 30px;
+	margin-top: 40px;
 }
 
 #viewport #footer li{
@@ -205,6 +210,124 @@ body {
 
 /* comments */
 #comments {
-	margin: 3px;
+	margin: 20px;
+}
+
+#comments .comments-title,
+#comments .comment-reply-title {
+	font-family: 'Permanent Marker',cursive;
+	font-size: 22px;
+	line-height: 22px;
+	padding-bottom: 30px;
+}
+
+#comments .comments-title a,
+#comments .comment-reply-title a {
+	text-decoration: none;
+	color: #B6C8CA;
+}
+
+#comments .thread-even,
+#comments .thread-odd .comment-text {
 	background: #DBEEF0;
+}
+
+#comments .thread-odd,
+#comments .thread-even .comment-text {
+	background: #FFF;
+}
+
+#comments .comment-author {
+	display: inline-block;
+	width: 30%;
+}
+
+#comments .comment-author img{
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+#comments .comment-meta {
+	height: 100px;
+	display: table;
+	text-align: center;
+	line-height: 18px;
+}
+
+#comments .comment-meta small {
+	font-size: 10px;
+}
+
+#comments .comment-text {
+	display: inline-block;
+	width: 70%;
+	height: 100px;
+	vertical-align: top;
+	position: relative;
+}
+#comments .comment-text p{
+	padding: 20px;
+}
+
+#comments .comment-text .reply{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background: red;
+	padding: 2px 5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: none;
+}
+
+#comments .comment-text:hover .reply{
+	display: block;
+}
+
+#comments .comment-text .reply a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#comments .children {
+	padding-left: 40px;
+}
+
+#comments .comment {
+	padding: 10px;
+	font-family: 'Coming Soon',cursive;
+}
+
+#comments .comment-form {
+	padding-left: 286px;
+	float: right;
+	background: url(img/skin/bg-comment.jpg) no-repeat bottom left;
+}
+
+#comments .comment-form-comment {
+	width: 100%;
+}
+#comments .form-allowed-tags {
+	font-family: monospace;
+	font-size: 11px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	background: #ddd;
+}
+
+#comments #comment {
+	padding: 20px;
+	width: 612px;
+}
+
+#comments .form-submit {
+	height: 40px;
+	padding-top: 10px;
+}
+
+#comments .form-submit #submit{
+	float: right;
+	padding: 5px 10px;
 }

@@ -39,7 +39,7 @@ if ( post_password_required() ) {
 
 	<ol class="comment-list">
 		<?php
-			wp_list_comments('type=comment&callback=mytheme_comment');
+			wp_list_comments('type=comment&callback=babyblog_comment');
 		?>
 	</ol><!-- .comment-list -->
 
@@ -57,6 +57,11 @@ if ( post_password_required() ) {
 
 	<?php endif; // have_comments() ?>
 
-	<?php comment_form(); ?>
-
+	<?php comment_form(array(
+		'title_reply_to' => __( 'Leave a Reply to %s' ),
+		'logged_in_as' => '',
+		'comment-form-comment' => '',
+		'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
+	)); ?>
+	<div style="display:block;height:0px;clear:both;width:100%;"></div>
 </div><!-- #comments -->

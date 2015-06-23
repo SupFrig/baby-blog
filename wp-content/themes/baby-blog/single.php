@@ -24,7 +24,7 @@
 						<div class="g-plus" data-action="share" data-annotation="none"></div>
 					</li>
 					<li>
-						<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="white"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_20.png" /></a>
+						<a href="//www.pinterest.com/pin/create/button/?url=<?php echo urlencode(get_the_permalink()) ?>&amp;media=<?php the_post_thumbnail('full'); ?>" data-pin-do="buttonBookmark"  data-pin-color="white"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_20.png" /></a>
 					</li>
 				</ul>
 				<?php if ( comments_open() || get_comments_number() ) {
