@@ -295,8 +295,12 @@ body {
 	padding-left: 40px;
 }
 
+#comments .comment-list {
+	padding-right: 10px;
+}
+
 #comments .comment {
-	padding: 10px;
+	padding: 10px 0px;
 	font-family: 'Coming Soon',cursive;
 }
 
