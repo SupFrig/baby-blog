@@ -4,7 +4,7 @@
 				<li>
 					<a href="<?php echo get_previous_post_url(); ?>" title="Previous"><img src="<?php bloginfo('template_url'); ?>/img/skin/btn-prev.png"/></a>
 				</li>
-				<li><a href="#" title="Random"><img src="<?php bloginfo('template_url'); ?>/img/skin/btn-random.png"/></a></li>
+				<li><a href="<?php echo get_random_url(); ?>" title="Random"><img src="<?php bloginfo('template_url'); ?>/img/skin/btn-random.png"/></a></li>
 				<li>
 					<a href="<?php echo get_next_post_url(); ?>" title="Next"><img src="<?php bloginfo('template_url'); ?>/img/skin/btn-next.png"/></a>
 				</li>

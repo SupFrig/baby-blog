@@ -41,6 +41,10 @@ function get_next_post_url(){
 	return $return;
 }
 
+function get_random_url(){
+	$posts = get_posts('orderby=rand&numberposts=1');
+	return get_permalink($posts[0]->ID);
+}
 function babyblog_comment($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
