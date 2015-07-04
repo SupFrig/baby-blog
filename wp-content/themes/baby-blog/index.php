@@ -1,5 +1,11 @@
 <?php
-	get_header();
+	//hotfix to redirect to last post
+	require('./wp-blog-header.php');
+		if (have_posts()) : the_post();
+			header("location: ".get_permalink());
+		exit;
+	endif;
+	/*get_header();
 	query_posts('showposts=1');
 	if ( have_posts() ) :
 		while ( have_posts() ) : the_post(); ?>
@@ -34,5 +40,5 @@
 		</div>
 		<?php endwhile;
 		endif; 
-		get_footer();
+		get_footer();*/
 		?>
