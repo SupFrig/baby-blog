@@ -41,6 +41,13 @@ function get_next_post_url(){
 	return $return;
 }
 
+function remove_comment_fields($fields) {
+    unset($fields['email']);
+    unset($fields['url']);
+    return $fields;
+}
+add_filter('comment_form_default_fields', 'remove_comment_fields');
+
 function get_random_url(){
 	$posts = get_posts('orderby=rand&numberposts=1');
 	return get_permalink($posts[0]->ID);
