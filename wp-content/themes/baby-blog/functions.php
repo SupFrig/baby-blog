@@ -46,7 +46,7 @@ function babyblog_comment($comment, $args, $depth) {
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 		<div id="comment-<?php comment_ID(); ?>">
 			<div class="comment-author vcard">
-				<?php echo get_avatar($comment,$size='100'); ?>
+				<?php echo get_avatar($comment,$size='100',$default=get_bloginfo('url').'/img/data/default_avatar.jpg' ); ?>
 				<div class="comment-meta commentmetadata">
 					<div class="valign">
 						<?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?><br/>
