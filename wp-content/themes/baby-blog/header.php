@@ -30,7 +30,9 @@
 		<meta name="msapplication-square310x310logo" content="<?php bloginfo('url'); ?>/mstile-310x310.png" />
 		<meta property="og:title" content="Baby Boredom" />
 		<meta property="og:description" content="The stories of a lonely baby who get bored"/>
+		<?php if(is_home()): ?>
 		<meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/data/share.jpg" />
+		<?php endif; ?>
 		<script>(function(d, s, id) {
 		  var js, fjs = d.getElementsByTagName(s)[0];
 		  if (d.getElementById(id)) return;
