@@ -27,6 +27,30 @@ function get_post_number($postID){
 	return $postCount;
 }
 
+function get_first_post_url(){
+	$firstPostQuery = new WP_Query('orderby=date&order=ASC&posts_per_page=1');
+	$link = '';
+	if($firstPostQuery->have_posts()) :
+		while ($firstPostQuery->have_posts()) : $firstPostQuery->the_post();
+			$link = get_permalink(get_the_ID());
+	endwhile;
+	endif;
+	wp_reset_query();
+	return $link;
+}
+
+function get_last_post_url(){
+	$lastPostQuery = new WP_Query('orderby=date&order=DESC&posts_per_page=1');
+	$link = '';
+	if($lastPostQuery->have_posts()) :
+		while ($lastPostQuery->have_posts()) : $lastPostQuery->the_post();
+			$link = get_permalink(get_the_ID());
+	endwhile;
+	endif;
+	wp_reset_query();
+	return $link;
+}
+
 function get_previous_post_url(){
 	$post = get_previous_post();
 	return get_permalink($post->ID);
