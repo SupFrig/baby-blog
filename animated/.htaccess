@@ -10,5 +10,5 @@ RewriteRule . /index.php [L]
 
 AuthType Basic
 AuthName "attention c'est secret"
-AuthUserFile /web/www.baby-boredom.com/animated/.htpasswd
+AuthUserFile .htpasswd
 require valid-user
