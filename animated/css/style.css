@@ -105,3 +105,34 @@ body {
 	display: inline-block;
 	position: absolute;
 }
+
+/* single animation */
+#anim-viewport {
+	position: relative;
+}
+
+#anim-viewport > *{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+.relative {
+	position: relative;
+}
+
+.blink {
+	border: 1px solid red;
+}
+
+.blink > * > * {
+	position: absolute;
+	display: none;
+	top: 0px;
+	left: 0px;
+}
+
+.blink > * > *.active {
+	display: block;
+}
