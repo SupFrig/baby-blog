@@ -10,20 +10,26 @@
 </head>
 <body>
 	<div id="container">
+		<canvas id="babyCanvas">
+		</canvas>
 		<div id="anim-viewport">
-			<img src="img/baby-body.png" style="z-index:1;top:182px;"/>
-			<img src="img/baby-teeth.png" style="z-index:3;top:406px;left:87px;"/>
-			<div class="blink" style="z-index:4;top:408px;left:100px;">
+			<img id="body" src="img/baby-body.png" style="z-index:1;top:10px;"/>
+			<img id="teeth" src="img/baby-teeth.png" style="z-index:3;top:234px;left:87px;"/>
+			<img id="hand" src="img/baby-hand.png" style="z-index:5;top:343px;left:42px;"/>
+			<div id="bib" class="blink" style="z-index:4;top:236px;left:100px;">
 				<div class="relative">
 					<img src="img/bib-frame-two.png" style="top:0px;left:0px;"/>
 					<img src="img/bib.png" style="top:54px;left:4px;"/>
 				</div>
 			</div>
 			
-			<img src="img/puke.png" style="z-index:2;left:95px;"/>
+			<img id="puke" src="img/puke.png" style="z-index:2;left:95px;"/>
 			
 		</div>
 	</div>
+	<script type="text/javascript" src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
+	<script type="text/javascript" src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
+	
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/single-anim.js"></script>
 </body>

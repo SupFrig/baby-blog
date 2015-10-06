@@ -109,6 +109,8 @@ body {
 /* single animation */
 #anim-viewport {
 	position: relative;
+	zoom: 0.7;
+	top:0%;
 }
 
 #anim-viewport > *{
@@ -116,6 +118,13 @@ body {
 	top: 0px;
 	left: 0px;
 	display: none;
+}
+
+#hand {
+	-webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .relative {
