@@ -14,6 +14,7 @@ this.init = function() {
 	this.babyBody = easelJsUtils.createBitmap('img/baby-body.png',200,0,{scale: [0.5,0.5]});
 	this.babyTeeth = easelJsUtils.createBitmap('img/baby-teeth.png',244,111,{scale: [0.5,0.5]});
 	this.babyHand = easelJsUtils.createBitmap('img/baby-hand.png',220,171,{scale: [0.5,0.5]});
+	this.puke = easelJsUtils.createBitmap('img/puke.png',247,-90,{scale: [0.5,0.5]});
 	/*this.bib = new createjs.SpriteSheet({
 		framerate: 40,
 		"images": ['img/bib.png','img/bib-frame-two.png'],
@@ -29,8 +30,9 @@ this.init = function() {
 	stage.setChildIndex( this.background_one,1);
 	stage.setChildIndex( this.background_two,1);
 	stage.setChildIndex( this.babyBody,2);
-	stage.setChildIndex( this.babyTeeth,3);
-	stage.setChildIndex( this.babyHand,3);
+	stage.setChildIndex( this.babyTeeth,4);
+	stage.setChildIndex( this.babyHand,4);
+	stage.setChildIndex( this.puke,3);
 };
  
  this.startTicker = function(fps) {
@@ -64,10 +66,12 @@ this.tickCallbacks = function(){
 		this.babyBody.y += 1;
 		this.babyTeeth.y += 1;
 		this.babyHand.y += 1;
+		this.puke.y += 1;
 	}else{
 		this.babyBody.y -= 1;
 		this.babyTeeth.y -= 1;
 		this.babyHand.y -= 1;
+		this.puke.y -= 1;
 	}
 	
 	//sky animation
