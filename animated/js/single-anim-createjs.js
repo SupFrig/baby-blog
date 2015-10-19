@@ -14,18 +14,41 @@ this.init = function() {
 	this.babyBody = easelJsUtils.createBitmap('img/baby-body.png',200,0,{scale: [0.5,0.5]});
 	this.babyTeeth = easelJsUtils.createBitmap('img/baby-teeth.png',244,111,{scale: [0.5,0.5]});
 	this.babyHand = easelJsUtils.createBitmap('img/baby-hand.png',220,171,{scale: [0.5,0.5]});
-	this.puke = easelJsUtils.createBitmap('img/puke.png',247,-90,{scale: [0.5,0.5]});
-	/*this.bib = new createjs.SpriteSheet({
-		framerate: 40,
-		"images": ['img/bib.png','img/bib-frame-two.png'],
-		"frames": {"regX": 82, "height": 292, "count": 64, "regY": 0, "width": 165},
-		// define two animations, run (loops, 1.5x speed) and jump (returns to run):
-		"animations": {
-			"up": [0, 20, "up", 1.5],
-			"down": [21, 40, "up"]
-		}
-	});*/
+	this.puke = easelJsUtils.createBitmap('img/puke.png',247,140,{scale: [0.5,0.5]});
 	
+	this.puke.regX = 0;
+	this.puke.regY = 465;
+	var bibAnimation = new createjs.SpriteSheet({
+		framerate: 40,
+		images: ['img/bib.png','img/bib-frame-two.png'],
+		frames: {
+			regX: 0,
+			regY: 0,
+			count: 2,
+			width: 378,
+			height: 220
+		},
+		animations: {
+			up: {
+				frames: 0,
+				next: "down",
+				speed: 0.1
+			},
+			down: {
+				frames: 1,
+				next: "up",
+				speed: 0.1
+			},
+		}
+	});
+	
+	this.bib = new createjs.Sprite(bibAnimation);
+	this.bib.scaleX = 0.5;
+	this.bib.scaleY = 0.5;
+	this.bib.x = 250;
+	this.bib.y = 115;
+	stage.addChild(this.bib);
+	this.bib.gotoAndPlay("up");
 	//layer indexes
 	stage.setChildIndex( this.background_one,1);
 	stage.setChildIndex( this.background_two,1);
@@ -33,6 +56,7 @@ this.init = function() {
 	stage.setChildIndex( this.babyTeeth,4);
 	stage.setChildIndex( this.babyHand,4);
 	stage.setChildIndex( this.puke,3);
+	stage.setChildIndex( this.bib,5);
 };
  
  this.startTicker = function(fps) {
@@ -66,12 +90,16 @@ this.tickCallbacks = function(){
 		this.babyBody.y += 1;
 		this.babyTeeth.y += 1;
 		this.babyHand.y += 1;
+		this.bib.y += 1;
 		this.puke.y += 1;
+		this.puke.rotation += 0.1;
 	}else{
 		this.babyBody.y -= 1;
 		this.babyTeeth.y -= 1;
 		this.babyHand.y -= 1;
+		this.bib.y -= 1;
 		this.puke.y -= 1;
+		this.puke.rotation -= 0.1;
 	}
 	
 	//sky animation
