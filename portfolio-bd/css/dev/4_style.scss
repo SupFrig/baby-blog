@@ -1,0 +1,175 @@
+body {
+	font-family: $text-font;
+}
+
+
+header{
+	height: 130px;
+	
+	
+	@include bpmax(480px){
+		height: 220px;
+	}
+	&.fixed {
+		
+	}
+	.valign {
+		height: 90px;
+		@include bpmax(480px){
+			height: 180px;
+		}
+		&:before{
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+	}
+	.logo {
+		display: inline-block;
+		vertical-align: middle;
+		width:30%;
+		h1{
+			font-family: $title-font;
+			font-style: italic;
+			font-size: 36px;
+			
+			line-height: 36px;
+			display: inline-block;
+		}
+		
+		strong{
+			font-family: $text-font;
+			font-size: 18px;
+			line-height: 18px;
+			display: block;
+		}
+	}
+	
+	nav.menu {
+		text-align: right;
+		display: inline-block;
+		width:68%;
+		@include bpmax(1280px){width: 60%;}
+		@include bpmax(480px){
+			width: 50%;
+		}
+		ul {
+			display:inline-block;
+			vertical-align: middle;
+			li {
+				display: inline-block;
+				padding: 0%;
+				
+				a {
+					color: $text-black;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	
+	.filters {
+		height: 40px;
+		line-height: 40px;
+		background: #ccc;
+		li {
+			display: inline-block;
+			a {
+				height: 100%;
+				display: block;
+				padding: 0px 20px;
+				text-decoration: none;
+				&:hover,&.active {
+					background: #ddd;
+				}
+			}
+		}
+	}
+}
+
+.projects {
+	li{
+		width: 20%;
+		overflow: hidden;
+		display: inline-block;
+		position: relative;
+		margin: 0px;
+		padding: 0px;
+		vertical-align: top;
+		z-index:1;
+		transform:translate3d(0,0,0);
+		-webkit-transform:translate3d(0,0,0);
+		-moz-transform:translate3d(0,0,0);
+  
+		@include bpmax(1280px){width: calc(100%/3);}
+		@include bpmax(480px){width: 100%;}
+		
+		&:hover{
+			z-index:2;
+			-moz-box-shadow: 0px 0px 30px 3px #222;
+			-webkit-box-shadow: 0px 0px 30px 3px #222;
+			-o-box-shadow: 0px 0px 30px 3px #222;
+			box-shadow: 0px 0px 30px 3px #222;
+			@include transition(all,0.3s,ease-in-out);
+		}
+		a{
+			display: block;
+			width: 100%;
+			height: 100%;
+			
+			&:hover{
+				.mask {
+					opacity: 0.7;
+				}
+				
+			}
+			
+			.mask{
+				background: #fff;
+				opacity: 0;
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+				color: #000;
+				
+				-webkit-transition: opacity 0.5s ease-in;
+				-moz-transition: opacity 0.5s ease-in;
+				-ms-transition: opacity 0.5s ease-in;
+				-o-transition: opacity 0.5s ease-in;
+				transition: opacity 0.5s ease-in;
+				
+				.inner{
+					padding: 10%;
+					
+					strong{
+						display: inline-block;
+						min-height: 37px;
+					}
+				}
+			}
+		}
+		
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+}
+
+.featherlight {
+	position: absolute;
+	.featherlight-content {
+		padding: 0px;
+		margin: 0px;
+		max-height: none;
+		height: auto;
+		.featherlight-inner {
+			width: 100%;
+		}
+	}
+}

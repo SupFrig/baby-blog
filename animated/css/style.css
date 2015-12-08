@@ -59,8 +59,8 @@ body {
 }
 
 #container {
-	width: 100%;
-	margin: 0 auto;
+	width: 800px;
+	height: 450px;
 }
 #slider-container {
 	border: 1px solid #000;

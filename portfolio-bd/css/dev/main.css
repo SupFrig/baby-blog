@@ -1,0 +1,55 @@
+body {
+  font-family: Gudea, arial; }
+
+header {
+  padding: 1%;
+  height: 90px; }
+  header .logo h1 {
+    font-family: "Old Standard TT";
+    font-style: italic;
+    font-size: 36px;
+    line-height: 36px;
+    display: inline-block; }
+  header .logo strong {
+    font-family: Gudea;
+    font-size: 18px;
+    line-height: 18px; }
+
+.projects li {
+  width: 20%;
+  overflow: hidden;
+  display: inline-block;
+  opacity: 0;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: top; }
+  .projects li a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+    .projects li a:hover .mask {
+      opacity: 0.7; }
+    .projects li a .mask {
+      background: #fff;
+      opacity: 0;
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #000;
+      -webkit-transition: opacity 0.5s ease-in;
+      -moz-transition: opacity 0.5s ease-in;
+      -ms-transition: opacity 0.5s ease-in;
+      -o-transition: opacity 0.5s ease-in;
+      transition: opacity 0.5s ease-in; }
+      .projects li a .mask .inner {
+        padding: 10%; }
+        .projects li a .mask .inner strong {
+          display: inline-block;
+          min-height: 37px; }
+  .projects li img {
+    width: 100%;
+    display: block; }
+
+/*# sourceMappingURL=main.css.map */

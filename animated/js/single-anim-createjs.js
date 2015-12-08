@@ -9,18 +9,18 @@ this.init = function() {
 	this.isBabyFalling = true;
 	
 	//draw bitmaps
-	this.background_one = easelJsUtils.createBitmap('img/background.jpg',0,450,{scale: [0.5,0.5]});
-	this.background_two = easelJsUtils.createBitmap('img/background.jpg',0,0,{scale: [0.5,0.5]});
-	this.babyBody = easelJsUtils.createBitmap('img/baby-body.png',200,0,{scale: [0.5,0.5]});
-	this.babyTeeth = easelJsUtils.createBitmap('img/baby-teeth.png',244,111,{scale: [0.5,0.5]});
-	this.babyHand = easelJsUtils.createBitmap('img/baby-hand.png',220,171,{scale: [0.5,0.5]});
-	this.puke = easelJsUtils.createBitmap('img/puke.png',247,140,{scale: [0.5,0.5]});
+	this.background_one = easelJsUtils.createBitmap('http://www.baby-boredom.com/animated/img/background.jpg',0,450,{scale: [0.5,0.5]});
+	this.background_two = easelJsUtils.createBitmap('http://www.baby-boredom.com/animated/img/background.jpg',0,0,{scale: [0.5,0.5]});
+	this.babyBody = easelJsUtils.createBitmap('http://www.baby-boredom.com/animated/img/baby-body.png',200,0,{scale: [0.5,0.5]});
+	this.babyTeeth = easelJsUtils.createBitmap('http://www.baby-boredom.com/animated/img/baby-teeth.png',244,111,{scale: [0.5,0.5]});
+	this.babyHand = easelJsUtils.createBitmap('http://www.baby-boredom.com/animated/img/baby-hand.png',220,171,{scale: [0.5,0.5]});
+	this.puke = easelJsUtils.createBitmap('http://www.baby-boredom.com/animated/img/puke.png',247,140,{scale: [0.5,0.5]});
 	
 	this.puke.regX = 0;
 	this.puke.regY = 465;
 	var bibAnimation = new createjs.SpriteSheet({
 		framerate: 40,
-		images: ['img/bib.png','img/bib-frame-two.png'],
+		images: ['http://www.baby-boredom.com/animated/img/bib.png','http://www.baby-boredom.com/animated/img/bib-frame-two.png'],
 		frames: {
 			regX: 0,
 			regY: 0,
@@ -69,6 +69,18 @@ this.init = function() {
 
 // Préparer le stage et instancier EaselJsUtils
 this.prepareStage = function() {
+	// vanilla JS window width and height
+	var w=window,
+	d=document,
+	e=d.documentElement,
+	g=d.getElementsByTagName('body')[0],
+	x=w.innerWidth||e.clientWidth||g.clientWidth,
+	y=w.innerHeight||e.clientHeight||g.clientHeight;
+	
+	var container = d.getElementById('container');
+	container.style.height = y;
+	container.style.width = x;
+	
     this.canvas = document.getElementById('baby_canvas');
 
     this.stage = new createjs.Stage(this.canvas);
@@ -109,7 +121,7 @@ this.tickCallbacks = function(){
 	if(this.background_one.y < 0){
 		stage.removeChild(this.background_two);
 		this.background_two = this.background_one;
-		this.background_one = easelJsUtils.createBitmap('img/background.jpg',0,450,{scale: [0.5,0.5]});
+		this.background_one = easelJsUtils.createBitmap('http://www.baby-boredom.com/animated/img/background.jpg',0,450,{scale: [0.5,0.5]});
 		stage.setChildIndex( this.background_one,1);
 	}
 }
