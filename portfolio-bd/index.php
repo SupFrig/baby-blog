@@ -9,8 +9,8 @@
     <header>
 		<div class="valign">
 			<div class="logo">
-				<h1>SuperFrigo</h1>
-				<strong>unwilling & unskilled</strong>
+				<h1>Tiens,</h1>
+				<strong>voilà un dessin</strong>
 			</div><!--
 				--><nav class="menu">
 				<ul>
@@ -34,97 +34,92 @@
 			<li class="grid-sizer"></li>
 			<li class="item eye">
 				<a class="popin" href="#">
-					<img src="img/data/dancing_alien.jpg"/>
+					<img src="img/thumbs/dancing_alien.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item eye random">
-				<a class="popin" href="#">
-					<div class="mask">
-						<div class="inner">
-							<hr/>
-						</div>
-					</div>
-					<img src="img/data/psyche.jpg"/>
+				<a class="popin" href="img/data/psyche.jpg">
+					<img src="img/thumbs/psyche.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item random">
 				<a class="popin" href="img/data/rawr.jpg">
-					<img src="img/data/rawr.jpg"/>
+					<img src="img/thumbs/rawr.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item random">
 				<a class="popin" href="img/data/realbaby.png">
-					<img src="img/data/realbaby.png"/>
+					<img src="img/thumbs/realbaby.png"/>
 				</a>
 			</li><!--
 			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/4.jpg"/>
+				<a class="popin" href="img/data/4.jpg">
+					<img src="img/thumbs/4.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item insect">
-				<a class="popin" href="#">
-					<img src="img/data/vrombon.jpg"/>
+				<a class="popin" href="img/data/vrombon.jpg">
+					<img src="img/thumbs/vrombon.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item insect">
-				<a class="popin" href="#">
-					<img src="img/data/sauterelle.jpg"/>
+				<a class="popin" href="img/data/sauterelle.jpg">
+					<img src="img/thumbs/sauterelle.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item insect">
-				<a class="popin" href="#">
-					<img src="img/data/dragonfly.jpg"/>
+				<a class="popin" href="img/data/dragonfly.jpg">
+					<img src="img/thumbs/dragonfly.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item insect">
-				<a class="popin" href="#">
-					<img src="img/data/insect_hunter.jpg"/>
+				<a class="popin" href="img/data/insect_hunter.jpg">
+					<img src="img/thumbs/insect_hunter.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item insect">
-				<a class="popin" href="#">
-					<img src="img/data/insect_hunter_mask_out.jpg"/>
+				<a class="popin" href="img/data/insect_hunter_mask_out.jpg">
+					<img src="img/thumbs/insect_hunter_mask_out.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item insect">
-				<a class="popin" href="#">
-					<img src="img/data/scarab.jpg"/>
+				<a class="popin" href="img/data/scarab.jpg">
+					<img src="img/thumbs/scarab.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item insect">
-				<a class="popin" href="#">
-					<img src="img/data/mobile_storage.jpg"/>
+				<a class="popin" href="img/data/mobile_storage.jpg">
+					<img src="img/thumbs/mobile_storage.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item insect">
-				<a class="popin" href="#">
-					<img src="img/data/spider.jpg"/>
+				<a class="popin" href="img/data/spider.jpg">
+					<img src="img/thumbs/spider.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item eye">
-				<a class="popin" href="#">
-					<img src="img/data/troizyeux.jpg"/>
+				<a class="popin" href="img/data/troizyeux.jpg">
+					<img src="img/thumbs/troizyeux.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item eye">
-				<a class="popin" href="#">
-					<img src="img/data/warp.jpg"/>
+				<a class="popin" href="img/data/warp.jpg">
+					<img src="img/thumbs/warp.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/8.jpg"/>
+				<a class="popin" href="img/data/8.jpg">
+					<img src="img/thumbs/8.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/9.jpg"/>
+				<a class="popin" href="img/data/9.jpg">
+					<img src="img/thumbs/9.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/14.jpg"/>
+				<a class="popin" href="img/data/14.jpg">
+					<img src="img/thumbs/14.jpg"/>
 				</a>
 			</li>
 		</ul>

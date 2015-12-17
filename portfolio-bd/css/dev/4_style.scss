@@ -152,7 +152,6 @@ header{
 				
 				.inner{
 					padding: 10%;
-					
 					strong{
 						display: inline-block;
 						min-height: 37px;
@@ -170,22 +169,30 @@ header{
 
 .featherlight {
 	top: $header-desktop-height;
-	
+	cursor: not-allowed;
 	&:before {
 		margin-right: 0px;
 	}
 	.featherlight-content {
 		padding: 0px;
 		margin: 0px;
-		max-height: none;
+		max-height: 100%;
 		height: auto;
-		width: 50%;
+		max-width: 50%;
+		width: auto;
 		vertical-align: middle;
 		background: transparent;
 		max-height: 100%;
 		overflow: visible;
 		text-align: center;
-
+		cursor: not-allowed;
+		&:before {
+			height: 100%;
+			display: inline-block;
+			content: '';
+			vertical-align: middle;
+		}
+		
 		.featherlight-close-icon {
 			right: -51px;
 			line-height: 1em;
@@ -194,14 +201,18 @@ header{
 			color: #fff;
 			font-size: 3em;
 			position: absolute;
+			display: none;
 		}
 		
 		.featherlight-inner {
+			height: auto;
 			max-height: 100%;
+			width: auto;
+			max-width: 100%;
 			cursor: zoom-in;
 			vertical-align: middle;
+			display: inline-block;
 			background: $text-black;
-
 		}
 	}
 }

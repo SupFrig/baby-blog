@@ -2,13 +2,23 @@ var Tm = {};
 Tm.imgSizesArray = [];
 
 jQuery(document).ready(function(){
+	Tm.setBodyScrollbar();
 	Tm.isotope();
 	Tm.popin();
 });
 
 jQuery(window).resize(function(){
+	Tm.setBodyScrollbar();
 	Tm.sizeGridItems(jQuery('.projects ul'));
+	
 });
+
+Tm.setBodyScrollbar = function(){
+	//force overflow scroll if needed to avoid the scrollbar compute bug
+	if ( document.querySelector('body').offsetHeight > window.innerHeight ) {
+	  document.documentElement.style.overflowY = 'scroll';
+	}
+}
 
 Tm.isotope = function(){
 	var grid = jQuery('.projects ul');
@@ -35,6 +45,9 @@ Tm.isotope = function(){
 	jQuery('.filters').on('click','a',function(){
 		var $this = jQuery(this);
 		var generalFilter = '';
+		
+		Tm.setBodyScrollbar();
+		
 		$this.toggleClass('active');
 		jQuery('.filters a.active').each(function(){
 			generalFilter += jQuery(this).attr('data-filter')+',';
@@ -100,35 +113,52 @@ Tm.getThumbnail = function(original, scale){
   return canvas;
 }
 
+Tm.getPictureObject = function(url){
+    jQuery.ajax({
+		url: url, 
+		success: function(data) {
+			return jQuery(data).find('img');
+		} 
+    });
+}
+
 Tm.popin = function(){
 	jQuery('.popin').each(function(){
 		var $this = jQuery(this);
 		if($this.hasClass('content')){
-			
-		}else{
+			//todo page popins
+		}else{console.log($this.attr('href'));
 			var img = $this.find('img');
 			$this.featherlight(img,
 			{
 				afterOpen: function(){
 					
-					jQuery('body').css({
+					/* jQuery('body').css({
 						'position':'fixed',
 						'height':jQuery(document).height(),
 						'overflow-y':'scroll'
-					});
+					}); */
 					
+					var headerHeight = jQuery('header').height();
+					var layerHeight = parseInt(jQuery(window).height()) - parseInt(headerHeight);
+					jQuery('.featherlight-content').css('height',layerHeight);
 					//open img in original res in a new tab
 					jQuery(this.$instance).find('img').on('click',function(){
 						var win=window.open($this.attr('href'), '_blank');
 						win.focus();
 					});
+					
+					//hotfix for closing also on content wrapper
+					jQuery('.featherlight-content').on('click',function(){
+						jQuery('.featherlight').trigger('click');
+					});
 				},
 				beforeClose: function(){
-					jQuery('body').css({
+					/* jQuery('body').css({
 						'position':'static',
 						'height':'auto',
 						'overflow-y':'auto'
-					});
+					}); */
 				}
 			});
 		}

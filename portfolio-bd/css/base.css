@@ -275,20 +275,28 @@ header {
       display: block; }
 
 .featherlight {
-  top: 130px; }
+  top: 130px;
+  cursor: not-allowed; }
   .featherlight:before {
     margin-right: 0px; }
   .featherlight .featherlight-content {
     padding: 0px;
     margin: 0px;
-    max-height: none;
+    max-height: 100%;
     height: auto;
-    width: 50%;
+    max-width: 50%;
+    width: auto;
     vertical-align: middle;
     background: transparent;
     max-height: 100%;
     overflow: visible;
-    text-align: center; }
+    text-align: center;
+    cursor: not-allowed; }
+    .featherlight .featherlight-content:before {
+      height: 100%;
+      display: inline-block;
+      content: '';
+      vertical-align: middle; }
     .featherlight .featherlight-content .featherlight-close-icon {
       right: -51px;
       line-height: 1em;
@@ -296,11 +304,16 @@ header {
       background: transparent;
       color: #fff;
       font-size: 3em;
-      position: absolute; }
+      position: absolute;
+      display: none; }
     .featherlight .featherlight-content .featherlight-inner {
+      height: auto;
       max-height: 100%;
+      width: auto;
+      max-width: 100%;
       cursor: zoom-in;
       vertical-align: middle;
+      display: inline-block;
       background: #111; }
 
 /*# sourceMappingURL=base.css.map */
