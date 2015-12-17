@@ -16,9 +16,16 @@ Tm.isotope = function(){
 	grid.isotope({
 		itemSelector: '.item',
 		layoutMode: 'packery',
+		isInitLayout: false,
         packery: {
           columnWidth: '.grid-sizer'
         }
+	});
+	
+	
+
+	grid.on('layoutComplete',function(){
+	  jQuery('.projects').css('opacity',1);
 	});
 	
 	Tm.sizeGridItems(grid);
@@ -96,7 +103,34 @@ Tm.getThumbnail = function(original, scale){
 Tm.popin = function(){
 	jQuery('.popin').each(function(){
 		var $this = jQuery(this);
-		var img = $this.find('img');
-		$this.featherlight(img);
+		if($this.hasClass('content')){
+			
+		}else{
+			var img = $this.find('img');
+			$this.featherlight(img,
+			{
+				afterOpen: function(){
+					
+					jQuery('body').css({
+						'position':'fixed',
+						'height':jQuery(document).height(),
+						'overflow-y':'scroll'
+					});
+					
+					//open img in original res in a new tab
+					jQuery(this.$instance).find('img').on('click',function(){
+						var win=window.open($this.attr('href'), '_blank');
+						win.focus();
+					});
+				},
+				beforeClose: function(){
+					jQuery('body').css({
+						'position':'static',
+						'height':'auto',
+						'overflow-y':'auto'
+					});
+				}
+			});
+		}
 	});
 }

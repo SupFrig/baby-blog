@@ -131,10 +131,15 @@ table {
     padding: 10px 10px 0;
     border-bottom: 10px solid transparent; } }
 body {
-  font-family: Gudea, arial; }
+  font-family: Raleway, arial;
+  width: 100%; }
 
 header {
-  height: 130px; }
+  height: 130px;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  background: #fff; }
   @media screen and (max-width: 480px) {
     header {
       height: 220px; } }
@@ -151,18 +156,24 @@ header {
   header .logo {
     display: inline-block;
     vertical-align: middle;
-    width: 30%; }
+    width: 29%;
+    padding-left: 1%; }
     header .logo h1 {
-      font-family: "Old Standard TT", arial;
+      font-family: "Cookie", arial;
       font-style: italic;
-      font-size: 36px;
-      line-height: 36px;
+      font-size: 52px;
+      line-height: 52px;
       display: inline-block; }
     header .logo strong {
-      font-family: Gudea, arial;
+      font-family: Raleway, arial;
       font-size: 18px;
       line-height: 18px;
-      display: block; }
+      display: block;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
   header nav.menu {
     text-align: right;
     display: inline-block;
@@ -198,71 +209,98 @@ header {
         header .filters li a:hover, header .filters li a.active {
           background: #ddd; }
 
-.projects li {
-  width: 20%;
-  overflow: hidden;
-  display: inline-block;
-  position: relative;
-  margin: 0px;
-  padding: 0px;
-  vertical-align: top;
-  z-index: 1;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0); }
-  @media screen and (max-width: 1280px) {
-    .projects li {
-      width: calc(100%/3); } }
-  @media screen and (max-width: 480px) {
-    .projects li {
-      width: 100%; } }
-  .projects li:hover {
-    z-index: 2;
-    -moz-box-shadow: 0px 0px 30px 3px #222;
-    -webkit-box-shadow: 0px 0px 30px 3px #222;
-    -o-box-shadow: 0px 0px 30px 3px #222;
-    box-shadow: 0px 0px 30px 3px #222;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-  .projects li a {
-    display: block;
-    width: 100%;
-    height: 100%; }
-    .projects li a:hover .mask {
-      opacity: 0.7; }
-    .projects li a .mask {
-      background: #fff;
-      opacity: 0;
-      position: absolute;
+.projects {
+  padding-top: 130px;
+  opacity: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
+  .projects li {
+    width: 20%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: top;
+    z-index: 1;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0); }
+    @media screen and (max-width: 1280px) {
+      .projects li {
+        width: calc(100%/3); } }
+    @media screen and (max-width: 480px) {
+      .projects li {
+        width: 100%; } }
+    .projects li:hover {
+      z-index: 2;
+      -moz-box-shadow: 0px 0px 30px 3px #222;
+      -webkit-box-shadow: 0px 0px 30px 3px #222;
+      -o-box-shadow: 0px 0px 30px 3px #222;
+      box-shadow: 0px 0px 30px 3px #222;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    .projects li a {
       display: block;
       width: 100%;
-      height: 100%;
-      color: #000;
-      -webkit-transition: opacity 0.5s ease-in;
-      -moz-transition: opacity 0.5s ease-in;
-      -ms-transition: opacity 0.5s ease-in;
-      -o-transition: opacity 0.5s ease-in;
-      transition: opacity 0.5s ease-in; }
-      .projects li a .mask .inner {
-        padding: 10%; }
-        .projects li a .mask .inner strong {
-          display: inline-block;
-          min-height: 37px; }
-  .projects li img {
-    width: 100%;
-    display: block; }
+      height: 100%; }
+      .projects li a:hover .mask {
+        opacity: 0.7; }
+      .projects li a .mask {
+        background: #fff;
+        opacity: 0;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #000;
+        -webkit-transition: opacity 0.5s ease-in;
+        -moz-transition: opacity 0.5s ease-in;
+        -ms-transition: opacity 0.5s ease-in;
+        -o-transition: opacity 0.5s ease-in;
+        transition: opacity 0.5s ease-in; }
+        .projects li a .mask .inner {
+          padding: 10%; }
+          .projects li a .mask .inner strong {
+            display: inline-block;
+            min-height: 37px; }
+    .projects li img {
+      width: 100%;
+      display: block; }
 
 .featherlight {
-  position: absolute; }
+  top: 130px; }
+  .featherlight:before {
+    margin-right: 0px; }
   .featherlight .featherlight-content {
     padding: 0px;
     margin: 0px;
     max-height: none;
-    height: auto; }
+    height: auto;
+    width: 50%;
+    vertical-align: middle;
+    background: transparent;
+    max-height: 100%;
+    overflow: visible;
+    text-align: center; }
+    .featherlight .featherlight-content .featherlight-close-icon {
+      right: -51px;
+      line-height: 1em;
+      width: 50px;
+      background: transparent;
+      color: #fff;
+      font-size: 3em;
+      position: absolute; }
     .featherlight .featherlight-content .featherlight-inner {
-      width: 100%; }
+      max-height: 100%;
+      cursor: zoom-in;
+      vertical-align: middle;
+      background: #111; }
 
 /*# sourceMappingURL=base.css.map */

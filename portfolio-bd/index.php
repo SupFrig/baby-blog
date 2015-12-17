@@ -9,8 +9,8 @@
     <header>
 		<div class="valign">
 			<div class="logo">
-				<h1>Thomas Montet</h1>
-				<strong>Le mec qu'a pas d'idées</strong>
+				<h1>SuperFrigo</h1>
+				<strong>unwilling & unskilled</strong>
 			</div><!--
 				--><nav class="menu">
 				<ul>
@@ -48,28 +48,13 @@
 				</a>
 			</li><!--
 			--><li class="item random">
-				<a class="popin" href="#">
+				<a class="popin" href="img/data/rawr.jpg">
 					<img src="img/data/rawr.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item random">
-				<a class="popin" href="#">
+				<a class="popin" href="img/data/realbaby.png">
 					<img src="img/data/realbaby.png"/>
-				</a>
-			</li><!--
-			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/1.jpg"/>
-				</a>
-			</li><!--
-			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/2.jpg"/>
-				</a>
-			</li><!--
-			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/3.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item baby">
@@ -127,22 +112,6 @@
 					<img src="img/data/warp.jpg"/>
 				</a>
 			</li><!--
-			
-			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/5.jpg"/>
-				</a>
-			</li><!--
-			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/6.jpg"/>
-				</a>
-			</li><!--
-			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/7.jpg"/>
-				</a>
-			</li><!--
 			--><li class="item baby">
 				<a class="popin" href="#">
 					<img src="img/data/8.jpg"/>
@@ -151,21 +120,6 @@
 			--><li class="item baby">
 				<a class="popin" href="#">
 					<img src="img/data/9.jpg"/>
-				</a>
-			</li><!--
-			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/10.jpg"/>
-				</a>
-			</li><!--
-			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/11.jpg"/>
-				</a>
-			</li><!--
-			--><li class="item baby">
-				<a class="popin" href="#">
-					<img src="img/data/13.jpg"/>
 				</a>
 			</li><!--
 			--><li class="item baby">

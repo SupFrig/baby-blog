@@ -1,11 +1,14 @@
 body {
 	font-family: $text-font;
+	width: 100%;
 }
 
-
 header{
-	height: 130px;
-	
+	height: $header-desktop-height;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    background: #fff;
 	
 	@include bpmax(480px){
 		height: 220px;
@@ -28,13 +31,15 @@ header{
 	.logo {
 		display: inline-block;
 		vertical-align: middle;
-		width:30%;
+		width:29%;
+		padding-left:1%;
+		
 		h1{
 			font-family: $title-font;
 			font-style: italic;
-			font-size: 36px;
+			font-size: 52px;
 			
-			line-height: 36px;
+			line-height: 52px;
 			display: inline-block;
 		}
 		
@@ -43,6 +48,7 @@ header{
 			font-size: 18px;
 			line-height: 18px;
 			display: block;
+			@include transition(all,0.3s,linear);
 		}
 	}
 	
@@ -51,9 +57,7 @@ header{
 		display: inline-block;
 		width:68%;
 		@include bpmax(1280px){width: 60%;}
-		@include bpmax(480px){
-			width: 50%;
-		}
+		@include bpmax(480px){width: 50%;}
 		ul {
 			display:inline-block;
 			vertical-align: middle;
@@ -92,6 +96,9 @@ header{
 }
 
 .projects {
+	padding-top: $header-desktop-height;
+	opacity:0;
+	@include transition(all,0.3s,linear);
 	li{
 		width: 20%;
 		overflow: hidden;
@@ -162,14 +169,39 @@ header{
 }
 
 .featherlight {
-	position: absolute;
+	top: $header-desktop-height;
+	
+	&:before {
+		margin-right: 0px;
+	}
 	.featherlight-content {
 		padding: 0px;
 		margin: 0px;
 		max-height: none;
 		height: auto;
+		width: 50%;
+		vertical-align: middle;
+		background: transparent;
+		max-height: 100%;
+		overflow: visible;
+		text-align: center;
+
+		.featherlight-close-icon {
+			right: -51px;
+			line-height: 1em;
+			width: 50px;
+			background: transparent;
+			color: #fff;
+			font-size: 3em;
+			position: absolute;
+		}
+		
 		.featherlight-inner {
-			width: 100%;
+			max-height: 100%;
+			cursor: zoom-in;
+			vertical-align: middle;
+			background: $text-black;
+
 		}
 	}
 }
